@@ -1,0 +1,94 @@
+.bg-success {
+    background-color: #28a745 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+/* Custom color styles */
+.row-green {
+    background-color: #d4edda; /* Light green */
+}
+
+.row-yellow {
+    background-color: #fff3cd; /* Light yellow */
+}
+
+.row-red {
+    background-color: #f8d7da; /* Light red */
+}
+
+/* CSS in style.css */
+
+/* Dark theme background */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+/* Table styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    color: #fff; /* Light text color */
+}
+
+.table th {
+    background-color: #555; /* Darker background for table headers */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #444; /* Slightly darker background for even rows */
+}
+
+/* Color classes */
+.Red {
+    background-color: #8a1f11; /* Dark red */
+}
+
+.Green {
+    background-color: #3b7a5f; /* Dark green */
+}
+
+.Yellow {
+    background-color: #917f2a; /* Dark yellow */
+}
+
+/* Button styles */
+.btn {
+    background-color: #555; /* Dark button background */
+    border: none;
+    color: #fff; /* Light text color */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Yellowish button for warning */
+    color: #333; /* Darker text color for contrast */
+}
+
+.btn-warning:hover {
+    background-color: #ffb300; /* Darker shade on hover */
+}
