@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Mapping Manager</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container my-5">
+        <h1 class="text-center">Field Mapping Manager</h1>
+
+        <div id="message" class="alert" style="display: none;"></div>
+
+        <h2>Mappings</h2>
+
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>J1 Field</th>
+                    <th>J2 Field</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mapping in mappings %}
+                <tr>
+                    <td>{{ mapping.j1_field }}</td>
+                    <td>{{ mapping.j2_field }}</td>
+                    <td>{{ mapping.type }}</td>
+                    <td>
+                        <button class="btn btn-sm"
+                                style="background-color: {% if mapping.color == 'Green' %}green; color: white;{% elif mapping.color == 'Yellow' %}yellow; color: black;{% elif mapping.color == 'Red' %}red; color: white;{% endif %};"
+                                onclick="editMapping('{{ mapping.j1_field }}', '{{ mapping.j2_field }}', '{{ mapping.type }}')">Edit</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <button class="btn btn-primary mb-3" onclick="showAddMappingModal()">Add Mapping</button>
+
+        <h2>Mismatches</h2>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>J1 Field</th>
+                    <th>J1 Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mismatch in mismatches %}
+                <tr>
+                    <td>{{ mismatch.j1_field }}</td>
+                    <td>{{ mismatch.j1_type }}</td>
+                    <td>
+                        <button class="btn btn-sm"
+                                style="background-color: {% if mismatch.color == 'Green' %}green; color: white;{% elif mismatch.color == 'Yellow' %}yellow; color: black;{% elif mismatch.color == 'Red' %}red; color: white;{% endif %};"
+                                onclick="resolveMismatch('{{ mismatch.j1_field }}', '{{ mismatch.j1_type }}')">Edit</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <button class="btn btn-success" onclick="saveMappings()">Save Mappings</button>
+        <button class="btn btn-info" onclick="generateOutput()">Generate Output</button>
+        <button class="btn btn-danger" onclick="undoChanges()">Undo Changes</button>
+        <button class="btn btn-secondary" onclick="downloadOutput()">Download Output</button>
+    </div>
+
+    <!-- Include the modals -->
+    {% include 'add_mapping_modal.html' %}
+    {% include 'edit_mapping_modal.html' %}
+    {% include 'resolve_mismatch_modal.html' %}
+
+    <script src="static/script.js"></script>
+</body>
+
+</html>
