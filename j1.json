@@ -1,0 +1,43 @@
+{
+  "transactions": [
+    {
+      "transaction_id": "TX123456",
+      "amount": 2500.75,
+      "currency": "USD",
+      "sender_account": {
+        "account_number": "123456789",
+        "bank_name": "Bank A",
+        "account_type": "savings"
+      },
+      "receiver_account": {
+        "account_number": "987654321",
+        "bank_name": "Bank B",
+        "account_type": "checking"
+      },
+      "transaction_date": "2024-07-01",
+      "status": "completed",
+      "reference_note": "Invoice 1234",
+      "transaction_type": "wire",
+      "clearing_date": "2024-07-03"
+    },
+    {
+      "transaction_id": "TX123457",
+      "amount": 1500.00,
+      "currency": "USD",
+      "sender_account": {
+        "account_number": "234567890",
+        "bank_name": "Bank C",
+        "account_type": "checking"
+      },
+      "receiver_account": {
+        "account_number": "876543210",
+        "bank_name": "Bank D",
+        "account_type": "savings"
+      },
+      "transaction_date": "2024-06-30",
+      "status": "pending",
+      "reference_note": "Invoice 5678",
+      "transaction_type": "ach"
+    }
+  ]
+}

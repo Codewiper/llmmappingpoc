@@ -1,0 +1,61 @@
+{
+  "transactions": [
+    {
+      "id": "TX123456",
+      "amount": "2500.75",
+      "currency_code": "USD",
+      "from_account": {
+        "account_no": "123456789",
+        "bank": "Bank A",
+        "type": "savings"
+      },
+      "to_account": {
+        "account_no": "987654321",
+        "bank": "Bank B",
+        "type": "checking"
+      },
+      "date": "2024-07-01",
+      "status": "completed",
+      "note": "Invoice 1234",
+      "type": "wire"
+    },
+    {
+      "id": "TX123457",
+      "amount": "1500.00",
+      "currency_code": "USD",
+      "from_account": {
+        "account_no": "234567890",
+        "bank": "Bank C",
+        "type": "checking"
+      },
+      "to_account": {
+        "account_no": "876543210",
+        "bank": "Bank D",
+        "type": "savings"
+      },
+      "date": "2024-06-30",
+      "status": "pending",
+      "note": "Invoice 5678",
+      "type": "ach"
+    },
+    {
+      "id": "TX123458",
+      "amount": "2000.50",
+      "currency_code": "USD",
+      "from_account": {
+        "account_no": "345678901",
+        "bank": "Bank E",
+        "type": "checking"
+      },
+      "to_account": {
+        "account_no": "765432109",
+        "bank": "Bank F",
+        "type": "savings"
+      },
+      "date": "2024-07-02",
+      "status": "completed",
+      "note": "Invoice 9101",
+      "type": "check"
+    }
+  ]
+}

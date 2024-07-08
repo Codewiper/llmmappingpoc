@@ -1,0 +1,107 @@
+{
+  "mappings": [
+    {
+      "j1_field": "transactions",
+      "j2_field": "transactions",
+      "type": "list",
+      "color": "Green"
+    },
+    {
+      "j1_field": "transactions.transaction_id",
+      "j2_field": "transactions.id",
+      "type": "str",
+      "color": "Yellow"
+    },
+    {
+      "j1_field": "transactions.amount",
+      "j2_field": "transactions.amount",
+      "type": "float/str",
+      "color": "Yellow"
+    },
+    {
+      "j1_field": "transactions.currency",
+      "j2_field": "transactions.currency_code",
+      "type": "str",
+      "color": "Yellow"
+    },
+    {
+      "j1_field": "transactions.sender_account",
+      "j2_field": "transactions.from_account",
+      "type": "dict",
+      "color": "Green"
+    },
+    {
+      "j1_field": "transactions.sender_account.account_number",
+      "j2_field": "transactions.from_account.account_no",
+      "type": "str",
+      "color": "Green"
+    },
+    {
+      "j1_field": "transactions.sender_account.bank_name",
+      "j2_field": "transactions.from_account.bank",
+      "type": "str",
+      "color": "Green"
+    },
+    {
+      "j1_field": "transactions.sender_account.account_type",
+      "j2_field": "transactions.from_account.type",
+      "type": "str",
+      "color": "Green"
+    },
+    {
+      "j1_field": "transactions.receiver_account",
+      "j2_field": "transactions.to_account",
+      "type": "dict",
+      "color": "Green"
+    },
+    {
+      "j1_field": "transactions.receiver_account.account_number",
+      "j2_field": "transactions.to_account.account_no",
+      "type": "str",
+      "color": "Green"
+    },
+    {
+      "j1_field": "transactions.receiver_account.bank_name",
+      "j2_field": "transactions.to_account.bank",
+      "type": "str",
+      "color": "Green"
+    },
+    {
+      "j1_field": "transactions.receiver_account.account_type",
+      "j2_field": "transactions.to_account.type",
+      "type": "str",
+      "color": "Green"
+    },
+    {
+      "j1_field": "transactions.transaction_date",
+      "j2_field": "transactions.date",
+      "type": "str",
+      "color": "Yellow"
+    },
+    {
+      "j1_field": "transactions.status",
+      "j2_field": "transactions.status",
+      "type": "str",
+      "color": "Green"
+    },
+    {
+      "j1_field": "transactions.reference_note",
+      "j2_field": "transactions.note",
+      "type": "str",
+      "color": "Yellow"
+    },
+    {
+      "j1_field": "transactions.transaction_type",
+      "j2_field": "transactions.type",
+      "type": "str",
+      "color": "Green"
+    }
+  ],
+  "mismatches": [
+    {
+      "j1_field": "transactions.clearing_date",
+      "j1_type": "str",
+      "color": "Red"
+    }
+  ]
+}
