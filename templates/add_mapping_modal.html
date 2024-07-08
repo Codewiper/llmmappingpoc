@@ -1,0 +1,37 @@
+<!-- Add Mapping Modal -->
+<div id="addMappingModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Mapping</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addMappingForm">
+                    <div class="form-group">
+                        <label for="newJ1Field">J1 Field:</label>
+                        <input type="text" class="form-control" id="newJ1Field" name="newJ1Field" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newJ2Field">J2 Field:</label>
+                        <input type="text" class="form-control" id="newJ2Field" name="newJ2Field" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newType">Type:</label>
+                        <select class="form-control" id="newType" name="newType" required>
+                            <option value="str">String</option>
+                            <option value="float">Float</option>
+                            <option value="number">Number</option>
+                            <option value="boolean">Boolean</option>
+                            <option value="null">Null</option>
+                            <option value="list">List</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Mapping</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

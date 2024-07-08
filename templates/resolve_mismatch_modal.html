@@ -1,0 +1,35 @@
+<!-- Resolve Mismatch Modal -->
+<div id="resolveMismatchModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title">Resolve Mismatch</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="resolveMismatchForm">
+                    <input type="hidden" id="mismatchJ1Field">
+                    <input type="hidden" id="mismatchJ1Type">
+                    <div class="form-group">
+                        <label for="resolveJ2Field">J2 Field:</label>
+                        <input type="text" class="form-control" id="resolveJ2Field" name="resolveJ2Field" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resolveType">Type:</label>
+                        <select class="form-control" id="resolveType" name="resolveType" required>
+                            <option value="str">String</option>
+                            <option value="float">Float</option>
+                            <option value="number">Number</option>
+                            <option value="boolean">Boolean</option>
+                            <option value="null">Null</option>
+                            <option value="list">List</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Resolve</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

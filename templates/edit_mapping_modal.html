@@ -1,0 +1,38 @@
+<!-- Edit Mapping Modal -->
+<div id="editMappingModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Mapping</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editMappingForm">
+                    <input type="hidden" id="oldJ1Field">
+                    <div class="form-group">
+                        <label for="j1Field">J1 Field:</label>
+                        <input type="text" class="form-control" id="j1Field" name="j1Field" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="j2Field">J2 Field:</label>
+                        <input type="text" class="form-control" id="j2Field" name="j2Field" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type:</label>
+                        <select class="form-control" id="type" name="type" required>
+                            <option value="str">String</option>
+                            <option value="float">Float</option>
+                            <option value="number">Number</option>
+                            <option value="boolean">Boolean</option>
+                            <option value="null">Null</option>
+                            <option value="list">List</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
